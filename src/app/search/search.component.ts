@@ -1,21 +1,30 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-
+import { SearchService } from './search.service';
 @Component({
   selector: 'search',
   templateUrl: './search.component.html',
+  providers: [SearchService],
   styleUrls: ['./search.component.css'],
 })
 export class Search {
   checkoutForm = this.formBuilder.group({
     date: '',
   });
+  constructor(
+    private formBuilder: FormBuilder,
+    private searchService: SearchService
+  ) {}
 
-  constructor(private formBuilder: FormBuilder) {}
+  search(searchTerm: string) {
+    if (searchTerm) {
+      this.searchService.search(searchTerm);
+    }
+  }
 
   onSubmit(): void {
     // Process checkout data here
-    console.log('Your order has been submitted', this.checkoutForm.value);
+    this.search(this.checkoutForm.value);
     // this.checkoutForm.reset();
   }
 }
