@@ -17,16 +17,13 @@ const httpOptions = {
 export class SearchService {
   constructor(private http: HttpClient) {}
 
-  search(searchDate: any): string {
+  search(searchDate: any): any {
     const baseURL = 'https://jsonmock.hackerrank.com/api/stocks';
 
     const options = searchDate
       ? { params: new HttpParams().set('date', searchDate.date) }
       : {};
 
-    let response = this.http.get(baseURL, options).subscribe((data) => {
-      console.log(data);
-    });
-    return 'response';
+    return this.http.get(baseURL, options);
   }
 }

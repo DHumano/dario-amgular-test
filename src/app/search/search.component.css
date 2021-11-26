@@ -26,9 +26,6 @@ button {
 
 ul {
   display: flex;
-  position: absolute;
-  top: 180px;
-  left: 300px;
 }
 
 li {
