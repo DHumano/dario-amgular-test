@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { SearchService } from './search.service';
+// import { List } from './list';
+
 @Component({
   selector: 'search',
   templateUrl: './search.component.html',
@@ -8,6 +10,8 @@ import { SearchService } from './search.service';
   styleUrls: ['./search.component.css'],
 })
 export class Search {
+  lists = null;
+//   lists = [{ open: null, close: null, high: null, low: null }];
   checkoutForm = this.formBuilder.group({
     date: '',
   });

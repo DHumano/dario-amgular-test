@@ -3,6 +3,15 @@
     <div>
       <input id="date" type="text" formControlName="date" />
       <button class="button" type="submit">Search</button>
+      <div *ngIf="!lists" class="no-result" data-test-id="no-result">No Results Found</div>
+      <ul *ngIf="lists">
+        <li *ngFor="let list of lists">
+          <span *ngIf="list.open">Open: {{ list?.open }}</span>
+          <span *ngIf="list.close">Close: {{ list?.close }}</span>
+          <span *ngIf="list.high">High: {{ list?.high }}</span>
+          <span *ngIf="list.low">Low: {{ list?.low }}</span>
+        </li>
+      </ul>
     </div>
   </form>
 </div>

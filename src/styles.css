@@ -11,7 +11,7 @@ app-top-bar {
 }
 
 app-top-bar h1 {
-  color: white;
+  color: #e5e5e5;
   margin: 0;
   color: #259525;
   font-family: Arial, Helvetica, sans-serif;
@@ -20,6 +20,7 @@ app-top-bar h1 {
 div {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 app-root {
