@@ -1,4 +1,6 @@
 export interface List {
-  id: number;
-  name: string;
+  open: number;
+  close: number;
+  low: number;
+  high: number;
 }

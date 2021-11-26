@@ -10,8 +10,9 @@ import { SearchService } from './search.service';
   styleUrls: ['./search.component.css'],
 })
 export class Search {
+  alert = false;
   lists = null;
-//   lists = [{ open: null, close: null, high: null, low: null }];
+  //   lists = [{ open: null, close: null, high: null, low: null }];
   checkoutForm = this.formBuilder.group({
     date: '',
   });
