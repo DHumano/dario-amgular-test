@@ -23,7 +23,7 @@ export class Search {
 
   search(searchTerm: string) {
     if (searchTerm) {
-      this.searchService.search(searchTerm);
+      console.log(this.searchService.search(searchTerm));
     }
   }
 
